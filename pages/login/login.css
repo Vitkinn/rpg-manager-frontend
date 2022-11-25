@@ -1,0 +1,18 @@
+body {
+    background-image: url("../../static/RPGist-login-background-page.jpg");
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+.login-box {
+    padding: 12%;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10%;
+    text-align: center;
+    box-shadow: black;
+}
+
