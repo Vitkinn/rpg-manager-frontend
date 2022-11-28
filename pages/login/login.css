@@ -1,10 +1,15 @@
 body {
     background-image: url("../../static/RPGist-login-background-page.jpg");
+    background-size: 1890px 1090px;
+    max-width: 1890px;
+    max-height: 1090px;
+    max-zoom: 90%;
 }
 
 main {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     padding: 10%;
 }
 
@@ -16,3 +21,18 @@ main {
     box-shadow: black;
 }
 
+#buttonLogin {
+    font-size: 10px;
+    padding: 14px 40px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 2px solid #596de1;
+    transition-duration: 0.4s;
+    margin-top: 10px;
+}
+
+#buttonLogin:hover {
+  background-color: #4458cc;
+  color: white;
+}
