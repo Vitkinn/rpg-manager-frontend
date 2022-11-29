@@ -1,9 +1,28 @@
-body {
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+      font-size: 16px;
+    }
+  }
+#login {
     background-image: url("../../static/RPGist-login-background-page.jpg");
     background-size: 1890px 1090px;
     max-width: 1890px;
     max-height: 1090px;
-    max-zoom: 90%;
+    overflow-x: hidden;
+    font-family: Helvetica;
+    font-size: 16px;
+}
+#sobre{
+    background: transparent;
+    background-size: 1890px 1090px;
+    max-width: 1890px;
+    max-height: 1090px;
+    overflow-x: hidden;
+    font-family: Helvetica;
+    font-size: 16px;
 }
 
 main {
@@ -15,7 +34,7 @@ main {
 
 .login-box {
     padding: 12%;
-    background-color: rgb(32, 32, 32);
+    background-color: #00060e;
     border-radius: 10%;
     text-align: center;
     box-shadow: black;

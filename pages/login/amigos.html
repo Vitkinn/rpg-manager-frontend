@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="../login/Logotipo_Moda_Loja_Minimalista_Preto_e_Branco-removebg-preview.png">
+    <link rel="stylesheet" href="../login/Table.css" />
 </head>
+
 <body>
-    <H1>LISTA DE AMIGOS</H1>
+
+    <h1>Amigos</h1>
+    <hr />
+    <div class="table-wrapper">
+
+        <form class="justify-content-evenly border-radius-5 needs-validation" style="margin-bottom: 3px;" action="/cliente/searchclient" method="post" novalidate>
+
+            <label class="form-group" for="buscar_cpf">Buscar username:</label>
+            <input type="text" class="form-group" id="buscar_username" name="buscar_username" placeholder="@Username">
+            <input class="form-group btn2" type="submit" value="Buscar" />
+
+        </form>
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th class="text-uppercase">Username</th>
+                    <th class="text-uppercase">Id</th>
+                    <th class="text-uppercase">Nome</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <span>Username</span>
+                    </td>
+                    <td>
+                        <span>Id</span>
+                    </td>
+
+                    <td>
+                        <span>Nome</span>
+                    </td>
+
+                </tr>
+                
+            </tbody>
+
+        </table>
+    </div>
+
+
 </body>
 </html>

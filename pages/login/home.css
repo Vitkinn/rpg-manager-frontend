@@ -2,6 +2,20 @@
     position: relative;
     min-height: 100%;
 }
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #012c49; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-top: 250px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 body {
     background-image: url("../../static/RPGist-login-background-page.jpg");
@@ -19,6 +33,10 @@ iframe{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-left: 10px;
+    margin-right: 100px;
+    max-width: 1200px;
+    border-style: black solid;
 }
 #viewport {
     padding-left: 250px;
