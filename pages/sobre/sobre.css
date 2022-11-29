@@ -1,0 +1,62 @@
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25%;
+    font-family: 'Roboto Condensed', Arial;
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 700px;
+    background: rgb(1,1,11);
+    background: linear-gradient(90deg, rgba(0,6,14,1) 0%, rgba(3,20,42,1) 51%, rgba(12,18,25,1) 100%);
+    margin-top: 100px;
+    opacity: 90%;
+}
+
+.sobre-text {
+    max-width: 450px;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/*---------------- Loader Starts----------------------- */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #07043e;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+/*---------------- Loader ends----------------------- */

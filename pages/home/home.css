@@ -2,39 +2,6 @@
     position: relative;
     min-height: 100%;
 }
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    transition: opacity 0.75s, visibility 0.75s;
-}
-.loader-hidden{
-    opacity: 0;
-    visibility: hidden;
-}
-.loader::after{
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid #dddd;
-    border-top-color: #07043e;
-    border-radius: 50%;
-    animation: loading 0.75s ease infinite;
-}
-@keyframes loading{
-    from{
-        transform: rotate(0turn);
-    }
-    to{
-        transform: rotate(1turn);
-    }
-}
 
 body {
     background-image: url("../../static/RPGist-login-background-page.jpg");
@@ -43,7 +10,7 @@ body {
     max-height: 1090px;
     max-zoom: 90%;
     overflow-x: hidden;
-    font-family: Helvetica;
+    font-family: 'Roboto Condensed', Arial;
     font-size: 16px;
 }
 iframe{
@@ -57,12 +24,9 @@ iframe{
     margin-right: 100px;
     max-width: 1200px;
 }
-.sobre{
-    border-radius: 25px;
-    background-color: #07043e !important;
-}
 #viewport {
     padding-left: 250px;
+    background: transparent;
 }
 
 #content {
@@ -71,7 +35,6 @@ iframe{
     position: relative;
     padding: 10px;
 }
-
 .input-container .label {
     text-align: left;
     display: inline-block;
@@ -236,16 +199,6 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
     display: flex;
 }
 
-.company__info {
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 12%, rgba(2,2,22,1) 51%, rgba(19,93,98,1) 100%);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-}
 h1 {
     text-align: center;
     font-size: 20px;
@@ -320,48 +273,38 @@ form {
         box-shadow: 0 0 5px rgba(0,80,80,.4);
         border-radius: 4px;
     }
-
-.btn {
-    transition: all .5s ease;
-    border-radius: 30px;
-    color: #07043e;
-    font-weight: 600;
-    background-color: #fff;
-    border: 1px solid #07043e;
-    margin:5px;
-
+/*---------------- Loader Starts----------------------- */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: opacity 0.75s, visibility 0.75s;
 }
-
-    .btn:hover, .btn:focus {
-        background-color: #07043e;
-        color: #fff;
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #07043e;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
     }
-
-.btn2 {
-    transition: all .5s ease;
-    border-radius: 30px;
-    color: #07043e;
-    font-weight: 600;
-    background-color: #fff;
-    border: 1px solid #07043e;
-    margin:0px;
-}
-
-    .btn2:hover, .btn2:focus {
-        background-color: #07043e;
-        color: #fff;
+    to{
+        transform: rotate(1turn);
     }
-.container-logo {
-    display: contents;
-    align-content: center;
-    margin: 50px 200px 50px 200px;
-    width: 1500px;
 }
-
-.body-logo {
-    float: none;
-    margin: 0 auto;
-    position: center;
-    background-color: #3d7e83;
-}
-
+/*---------------- Loader ends----------------------- */

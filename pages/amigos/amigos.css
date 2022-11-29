@@ -1,4 +1,4 @@
-﻿* {
+* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -198,39 +198,38 @@ h2 {
         opacity: 1
     }
 }
-
-#myDiv {
-    display: none;
-    text-align: center;
+/*---------------- Loader Starts----------------------- */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: opacity 0.75s, visibility 0.75s;
 }
-
-
-.btn {
-    transition: all .5s ease;
-    border-radius: 30px;
-    color: #07043e;
-    font-weight: 600;
-    background-color: #fff;
-    border: 1px solid #07043e;
-  
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
 }
-
-    .btn:hover, .btn:focus {
-        background-color: #07043e;
-        color: #fff;
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #07043e;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
     }
-
-.btn2 {
-    transition: all .5s ease;
-    border-radius: 30px;
-    color: #07043e;
-    font-weight: 600;
-    background-color: #fff;
-    border: 1px solid #07043e;
-    margin: 0px;
-}
-
-    .btn2:hover, .btn2:focus {
-        background-color: #07043e;
-        color: #fff;
+    to{
+        transform: rotate(1turn);
     }
+}
+/*---------------- Loader ends----------------------- */
