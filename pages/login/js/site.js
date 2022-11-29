@@ -1,43 +1,28 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-function myFunction() {
-    var myVar;
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
-}
-
-function MascaraSalario(element) {
+﻿function MascaraSalario(element) {
     if (element.value != '') {
         element.value = 'R$' + element.value + ',00'
     }
 }
 //---------------------Validação------------------------
-(function () {
-    'use strict'
+// (function () {
+//     'use strict'
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
+//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//     var forms = document.querySelectorAll('.needs-validation')
 
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
+//     // Loop over them and prevent submission
+//     Array.prototype.slice.call(forms)
+//         .forEach(function (form) {
+//             form.addEventListener('submit', function (event) {
+//                 if (!form.checkValidity()) {
+//                     event.preventDefault()
+//                     event.stopPropagation()
+//                 }
 
-                form.classList.add('was-validated')
-            }, false)
-        })
-})()
+//                 form.classList.add('was-validated')
+//             }, false)
+//         })
+// })()
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -57,3 +42,12 @@ function prepareFrame(name) {
   document.getElementById("iframe").src="../login/"+name+".html"
 
 }
+window.addEventListener("load", () =>{
+
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("trasitionend",  () =>{
+    document.body.removeChild("loader");
+  })
+})

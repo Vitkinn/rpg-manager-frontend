@@ -3,19 +3,38 @@
     min-height: 100%;
 }
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #012c49; /* Blue */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #07043e;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    margin-top: 250px;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+    animation: loading 0.75s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
 
 body {
     background-image: url("../../static/RPGist-login-background-page.jpg");
@@ -33,17 +52,17 @@ iframe{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: 10px;
     margin-right: 100px;
     max-width: 1200px;
-    border-style: black solid;
+}
+.sobre{
+    border-radius: 25px;
+    background-color: #07043e !important;
 }
 #viewport {
     padding-left: 250px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 #content {
@@ -343,10 +362,6 @@ form {
     float: none;
     margin: 0 auto;
     position: center;
-    background-color: #3d7e83;
-}
-
-.html-login {
     background-color: #3d7e83;
 }
 
