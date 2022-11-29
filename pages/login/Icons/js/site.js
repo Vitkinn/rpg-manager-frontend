@@ -39,7 +39,7 @@ for (i = 0; i < coll.length; i++) {
 }
 function prepareFrame(name) {
 
-  document.getElementById("iframe").src="../login/"+name+".html"
+  document.getElementById("iframe").src="../"+name+"/"+name+".html"
 
 }
 window.addEventListener("load", () =>{
