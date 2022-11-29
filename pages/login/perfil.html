@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="~/css/Table.css" />
 
 </head>
-<div class="table-wrapper" style="width: 700px;">
-
+<body>
+    
+    <div class="table-wrapper">
+        
     <div class="card overflow-hidden bg-light top-rad">
 
         <div class="row no-gutters row-bordered row-border-light">
@@ -33,15 +35,15 @@
                                 Configurações de Conta
                             </h1>
                         </th>
-
+                        
                     </tr>
                 </thead>
             </table>
-
+            
             <div class="col-md-2 pt-0">
                 <div class="list-group list-group-flush account-settings-links">
                     <a class="list-group-item list-group-item-action active" data-toggle="list"
-                        href="#account-acesso">Acesso</a>
+                    href="#account-acesso">Acesso</a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-geral">Geral</a>
                 </div>
             </div>
@@ -94,9 +96,9 @@
                                     <div class="form-group col-md-6">
                                         <label for="input_cidade">Cidade</label>
                                         <input type="text" class="form-control" id="input_cidade" name="cidade"
-                                            maxlength="50" value="@func.cidade" required>
+                                        maxlength="50" value="@func.cidade" required>
                                     </div>
-
+                                    
                                     <div class="form-group col-md-4">
                                         <label for="input_estado">Estado</label>
                                         <select id="input_estado" name="estado" class="form-control" required>
@@ -138,24 +140,24 @@
                                 <div class="form-group col-md-5 ml-3">
                                     <label for="input_rua">Rua</label>
                                     <input type="text" class="form-control" id="input_rua" name="rua"
-                                        placeholder="ex: Rua XV Novembro" maxlength="50" value="@func.rua" required>
+                                    placeholder="ex: Rua XV Novembro" maxlength="50" value="@func.rua" required>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="input_numero_residencia">Número</label>
                                     <input type="text" class="form-control" id="input_numero_residencia"
-                                        name="numero_residencia" placeholder="ex: 277" maxlength="4"
-                                        value="@func.numero_residencia" required>
+                                    name="numero_residencia" placeholder="ex: 277" maxlength="4"
+                                    value="@func.numero_residencia" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="input_bairro">Bairro</label>
                                     <input type="text" class="form-control" id="input_bairro" name="bairro"
-                                        placeholder="ex: Centro" maxlength="50" value="@func.bairro" required>
+                                    placeholder="ex: Centro" maxlength="50" value="@func.bairro" required>
                                 </div>
                                 <div class="form-group col-md-9 ml-3">
                                     <label for="input_complemento">Complemento</label>
                                     <input type="text" class="form-control" id="input_complemento" name="complemento"
-                                        placeholder="ex: Apartamento/Casa" maxlength="50" value="@func.complemento"
-                                        required>
+                                    placeholder="ex: Apartamento/Casa" maxlength="50" value="@func.complemento"
+                                    required>
                                 </div>
                             </div>
                         </div>
@@ -166,3 +168,5 @@
         </div>
     </div>
 </div>
+<script src="../login/js/site.js"></script>
+</body>

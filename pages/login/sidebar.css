@@ -19,14 +19,19 @@
 
 
 .sidebar:hover, nav.sidebar.expanded {
-    width: 280px;
+    width: 250px;
     overflow: visible;
 }
 
 .sidebar {
     background: rgb(1,1,11);
-    background: linear-gradient(135deg, hsla(300, 20%, 1%, 1) 21%, hsla(209, 100%, 11%, 1) 100%);
-    border-right: 1px solid #e5e5e5;
+    /* background: linear-gradient(135deg, hsla(300, 20%, 1%, 1) 21%, hsla(209, 100%, 11%, 1) 100%); */
+    background-image: url("../../static/Sidebar.png");
+    background-size: 250px;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
     position: fixed;
     top: inherit;
     bottom: 0;
@@ -49,7 +54,7 @@
     .sidebar li {
         position: relative;
         display: block;
-        width: 250px;
+        width: 240px;
     }
 
         .sidebar li > a {
@@ -86,7 +91,7 @@
         position: relative;
         display: table-cell;
         vertical-align: middle;
-        width: 190px;
+        width: 150px;
         font-family: 'Titillium Web', sans-serif;
     }
 
@@ -123,7 +128,7 @@ nav {
 
     .sidebar li:hover > a, nav.main-menu li.active > a, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .no-touch .dashboard-page nav.dashboard-menu ul li:hover a, .dashboard-page nav.dashboard-menu ul li.active a {
         color: #fff;
-        background-color: rgb(5, 2, 72);
+        background-color: rgb(3, 1, 38);
 
     }
 
