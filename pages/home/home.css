@@ -27,6 +27,8 @@ iframe{
 #viewport {
     padding-left: 250px;
     background: transparent;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #content {

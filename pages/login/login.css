@@ -6,6 +6,9 @@
       font-size: 16px;
     }
   }
+.logo{
+  margin-bottom: 20px;
+}
 #login {
     background-image: url("../../static/RPGist-login-background-page.jpg");
     background-size: 1890px 1090px;
@@ -33,11 +36,12 @@ main {
 }
 
 .login-box {
-    padding: 12%;
+    padding:5%;
     background-color: #00060e;
     border-radius: 10%;
     text-align: center;
     box-shadow: black;
+    height: 500px;
 }
 
 #buttonLogin {
