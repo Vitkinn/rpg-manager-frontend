@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,79 +9,99 @@
     <link rel="icon" href="/static/Logotipo.png">
     <link rel="stylesheet" href="../amigos/amigos1.css" />
     <link rel="stylesheet" href="/style/default.css">
-   
+
 </head>
+ 
 
 <body>
 
-    <h1>Amigos</h1>
-    <hr />
+
     <div class="table-wrapper">
-        <div class="searchfriend">
-            <form class="border-radius-5" style="margin-bottom: 5px;" method="post">
-                <label class="form-group" for="buscar_cpf">Adicionar Username:</label>
-                <input type="text" id="buscar_username" name="buscar_username" placeholder="@Username">
-                <input class="form-group btn2" type="submit" value="Buscar" />
-            </form>
+        <div class="row no-gutters row-bordered row-border-light">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th class="th-rad">
+                            <h1>
+                                Amigos
+                            </h1>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="searchfriend">
+                                <form class="border-radius-5" style="margin-bottom: 5px;" method="post">
+                                    <label class="form-group" for="buscar_cpf">Adicionar Username:</label>
+                                    <input type="text" id="buscar_username" name="buscar_username"
+                                        placeholder="@Username">
+                                    <input class="form-group btn2" type="submit" value="Adicionar" />
+                                </form>
+                            </div>
+                        </th>
+                    </tr>
+
+                </thead>
+
+
+                <thead>
+                    <tr>
+                        <th class="text-uppercase">Username</th>
+                        <th class="text-uppercase">Rank</th>
+                        <th class="text-uppercase">Remover</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>Username</span>
+                        </td>
+                        <td>
+                            <span>Rank</span>
+                        </td>
+
+                        <td>
+                            <input type="button" value="Remover" class="btn2">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Username</span>
+                        </td>
+                        <td>
+                            <span>Rank</span>
+                        </td>
+
+                        <td>
+                            <input type="button" value="Remover" class="btn2">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Username</span>
+                        </td>
+                        <td>
+                            <span>Rank</span>
+                        </td>
+
+                        <td>
+                            <input type="button" value="Remover" class="btn2">
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
         </div>
-
-        <table class="fl-table">
-            <thead>
-                <tr>
-                    <th class="text-uppercase">Username</th>
-                    <th class="text-uppercase">Rank</th>
-                    <th class="text-uppercase">Remover</th>
-
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>
-                        <span>Username</span>
-                    </td>
-                    <td>
-                        <span>Rank</span>
-                    </td>
-
-                    <td>
-                        <input type="button" value="Remover"class="btn2">
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <span>Username</span>
-                    </td>
-                    <td>
-                        <span>Rank</span>
-                    </td>
-
-                    <td>
-                        <input type="button" value="Remover"class="btn2">
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <span>Username</span>
-                    </td>
-                    <td>
-                        <span>Rank</span>
-                    </td>
-
-                    <td>
-                        <input type="button" value="Remover"class="btn2">
-                    </td>
-
-                </tr>
-                
-            </tbody>
-
-        </table>
     </div>
     <div class="loader"></div>
 
     <link rel="stylesheet" href="../js/site.js">
 </body>
+
 </html>
