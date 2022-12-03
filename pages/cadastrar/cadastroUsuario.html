@@ -4,41 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG'ist</title>
     <link rel="icon" href="/static/Logotipo.png">
-    <!-- <link rel="stylesheet" href="../login/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/pages/login/lib/bootstrap/dist/css/bootstrap.css" /> -->
-    <!-- <link rel="stylesheet" href="../login/home.css" />
-    <link rel="stylesheet" href="../login/sidebar.css" />
-    <link rel="stylesheet" href="../login/topbar.css" />
-    <link rel="stylesheet" href="../login/Icons/icon.css" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/default.css">
     <link rel="stylesheet" href="../cadastrar/cadastrar.css" />
-
+    <link rel="stylesheet" href="../js/site.js">
+    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
 </head>
 
 <body>
-    <div>
-        <a class="nav-link" href="../login/login.html">
-            <img class=" fa bi fa-2x" src="../login/Icons/BootIcon/arrow-left.svg" />
-        </a>
-    </div>
 
     <div class="table-wrapper">
-
         <table class="fl-table">
             <thead>
                 <tr>
                     <th>
-                        <h1>Cadastrar Usuario</h1>
+                        <h1>Cadastrar Usuário</h1>
                     </th>
                 </tr>
             </thead>
-            <form method="post" class="needs-validation" novalidate>
+        </table>
+        <tbody>
+            <form action="/cadastros/authcadastrocliente" method="post" class="needs-validation" novalidate>
                 <h2>Login</h2>
                 <div class="form-row">
                     <div class="form-group col-md-12">
@@ -49,10 +37,19 @@
                             <!--Mensagem em caso de campo inválido-->
                             Email inválido!
                         </div>
+
+                        <label for="inputUsername">Username</label>
+                        <input type="text" class="form-control" id="input_username" name="input_username"
+                            placeholder="user_name" maxlength="50" value="" required>
+                        <div class="invalid-feedback">
+                            <!--Mensagem em caso de campo inválido-->
+                            Username inválido!
+                        </div>
+
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col col-md-6">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
                         <label for="input_senha">Senha(mínimo 8 caracteres)</label>
                         <input type="password" class="form-control" id="input_senha" name="input_senha"
                             placeholder="Senha" minlength="8" ; maxlength="50" size="8" value="" required>
@@ -61,7 +58,7 @@
                             Mínimo 8 caracteres!
                         </div>
                     </div>
-                    <div class="col col-md-4">
+                    <div class="form-group col-md-6">
                         <label for="input_senha_confirma">Confirmar Senha</label>
                         <input type="password" class="form-control" id="input_senha_confirma"
                             name="input_senha_confirma" placeholder="Confirmar senha" minlength="8" ; maxlength="50"
@@ -92,7 +89,7 @@
 
                 <hr />
                 <h2>Dados Pessoais</h2>
-                <div class="form-group row">
+                <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="input_name">Nome</label>
                         <input type="text" class="form-control" id="input_name" name="input_name"
@@ -102,7 +99,7 @@
                             Insira um nome!
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                         <label for="input_data_de_nascimento">Data de Nascimento</label>
                         <input type="date" class="form-control" id="input_data_de_nascimento"
                             name="input_data_de_nascimento" placeholder="01/01/2000" value="" required>
@@ -111,9 +108,7 @@
                             Data inválida!
                         </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                         <label for="input_cpf">Cpf</label>
                         <input type="text" class="form-control" id="input_cpf" name="input_cpf"
                             placeholder="111.222.333-44" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" value="" required>
@@ -123,19 +118,7 @@
                             Cpf inválido!
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="input_rg">Rg</label>
-                        <input type="text" class="form-control" id="input_rg" name="input_rg" placeholder="1.222-333"
-                            value="" required>
-                        <!--Pattern-> máscara para o campo-->
-                        <div class="invalid-feedback">
-                            <!--Mensagem em caso de campo inválido-->
-                            RG inválido!
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                         <label for="input_tel_1">Telefone 1</label>
                         <input type="text" class="form-control" id="input_tel_1" name="input_tel_1"
                             placeholder="(47) 00000-0000" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" value="" required>
@@ -145,7 +128,7 @@
                             Telefone inválido!
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                         <label for="input_tel_2">Telefone 2 (opcional)</label>
                         <input type="tel" class="form-control" id="input_tel_2" name="input_tel_2"
                             placeholder="(47) 90000-0000" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}">
@@ -155,7 +138,7 @@
                 <hr />
                 <h2>Endereço</h2>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-2">
                         <label for="input_cep">CEP</label>
                         <input type="text" class="form-control" id="input_cep" name="input_cep" placeholder="12345-123"
                             pattern="\d{5}-\d{3}" value="" required>
@@ -174,48 +157,47 @@
                             Cidade inválida!
                         </div>
                     </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="input_estado">Estado</label>
-                    <select id="input_estado" name="input_estado" class="form-control" required>
-                        <option selected disabled value="">Escolha...</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                        <option value="EX">Estrangeiro</option>
+                    <div class="form-group col-md-4">
+                        <label for="input_estado">Estado</label>
+                        <select id="input_estado" name="input_estado" class="form-control" required>
+                            <option selected disabled value="">Escolha...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
 
 
-                    </select>
-                    <div class="invalid-feedback">
-                        <!--Mensagem em caso de campo inválido-->
-                        Escolha um Estado!
+                        </select>
+                        <div class="invalid-feedback">
+                            <!--Mensagem em caso de campo inválido-->
+                            Escolha um Estado!
+                        </div>
                     </div>
                 </div>
-
                 <div class="form-row">
 
                     <div class="form-group col-md-5">
@@ -255,20 +237,20 @@
                         Insira um complemento!
                     </div>
                 </div>
+
+                <br />
+                <!--Botão que cadastra caso todos os requisitos sejam preenchidos-->
+                <button id="btn_cadastrar" type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+            </form>
+        </tbody>
     </div>
 
-    <br />
-    <!--Botão que cadastra caso todos os requisitos sejam preenchidos-->
-    <button id="btn_cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
-    </form>
-    </table>
-    </div>
-    <div class="loader"></div>
-    <script src="../login/lib/jquery/dist/jquery.min.js"></script>
-    <script src="../login/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/site.js" asp-append-version="true"></script>
+    <script src="../lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script type="text/javascript" src="../login/lib/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+    <script type="text/javascript" src="../lib/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
     <script>$('#input_cpf').mask('000.000.000-00');</script>
     <script>$('#input_tel_1').mask('(00)00000-0000');</script>
     <script>$('#input_tel_2').mask('(00)00000-0000');</script>
@@ -276,4 +258,19 @@
     <script>$('#input_numero_residencia').mask('0000');</script>
     <script>$('#input_altura').mask('000');</script>
     <script>$('#input_comprimento').mask('000');</script>
+    <script>
+        var input_senha = document.getElementById("input_senha")
+            , input_senha_confirma = document.getElementById("input_senha_confirma");
+
+        function validatePassword() {
+            if (input_senha.value != input_senha_confirma.value) {
+                input_senha_confirma.setCustomValidity("Senhas diferentes!");       //Script para conferir se as senhas digitadas são iguais
+            } else {
+                input_senha_confirma.setCustomValidity('');
+            }
+        }
+
+        input_senha.onchange = validatePassword;
+        input_senha_confirma.onkeyup = validatePassword;
+    </script>
 </body>

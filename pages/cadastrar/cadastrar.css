@@ -1,8 +1,18 @@
+﻿body{
+    background-image: url("../../static/RPGist-login-background-page.jpg");
+    max-width: 1890px;
+    max-height: 1090px;
+    font-family: 'Roboto Condensed', Arial;
+    align-items: center;
+    font-size: 16px;
+}
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+
 .collapsible {
     background-color: #eee;
     color: #444;
@@ -25,20 +35,6 @@
     background-color: #f1f1f1;
 }
 
-
-body {
-    font-family: Helvetica;
-    -webkit-font-smoothing: antialiased;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../../static/RPGist-login-background-page.jpg");
-    max-zoom: 90%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-size: 16px;
-}
-
 h1 {
     text-align: center;
     font-size: 20px;
@@ -59,6 +55,16 @@ h2 {
     letter-spacing: 1px;
     padding: 30px 0;
 }
+.btn2 {
+    transition: all .5s ease;
+    border-radius: 30px;
+    color: #07043e;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #07043e;
+    margin:0px;
+}
+
 
 /* Table Styles */
 
@@ -66,7 +72,9 @@ h2 {
     margin: 10px 70px 70px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
     width: 800px;
-
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .table-wrapper-no-shadow {
@@ -112,9 +120,7 @@ h2 {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
-.needs-validation{
-    padding: 20px;
-}
+
 /* Responsive */
 
 @media (max-width: 767px) {
@@ -211,38 +217,53 @@ h2 {
         opacity: 1
     }
 }
-/*---------------- Loader Starts----------------------- */
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+
+
+.btn {
+    transition: all .5s ease;
+    border-radius: 30px;
+    color: #07043e;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #07043e;
     display: flex;
     justify-content: center;
     align-items: center;
-    background:transparent;
-    transition: opacity 0.75s, visibility 0.75s;
+  
 }
-.loader-hidden{
-    opacity: 0;
-    visibility: hidden;
-}
-.loader::after{
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid #dddd;
-    border-top-color: #07043e;
-    border-radius: 50%;
-    animation: loading 0.75s ease infinite;
-}
-@keyframes loading{
-    from{
-        transform: rotate(0turn);
+
+    .btn:hover, .btn:focus {
+        background-color: #07043e;
+        color: #fff;
     }
-    to{
-        transform: rotate(1turn);
-    }
+
+
+.btn-delete {
+    transition: all .5s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 2px solid #f60000;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
 }
-/*---------------- Loader ends----------------------- */
+
+    .btn-delete:hover, .btn-delete:focus {
+        background-color: #f60000;
+        color: #fff;
+    }
+
+.btn-edit {
+    transition: all .5s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 2px solid #f49b29;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+    .btn-edit:hover, .btn-edit:focus {
+        background-color: #f86c09;
+        color: #fff;
+    }
