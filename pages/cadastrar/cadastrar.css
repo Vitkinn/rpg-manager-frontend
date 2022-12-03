@@ -29,6 +29,14 @@
 body {
     font-family: Helvetica;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../static/RPGist-login-background-page.jpg");
+    max-zoom: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 16px;
 }
 
 h1 {
@@ -57,6 +65,8 @@ h2 {
 .table-wrapper {
     margin: 10px 70px 70px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    width: 800px;
+
 }
 
 .table-wrapper-no-shadow {
@@ -78,6 +88,7 @@ h2 {
     max-width: 100%;
     white-space: nowrap;
     background-color: white;
+ 
 }
 
     .fl-table td, .fl-table th {
@@ -101,7 +112,9 @@ h2 {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
-
+.needs-validation{
+    padding: 20px;
+}
 /* Responsive */
 
 @media (max-width: 767px) {
