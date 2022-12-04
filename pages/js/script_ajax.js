@@ -1,12 +1,18 @@
 $(function() {
-    apiCall('/users/1', 'get', '');
+    $(document).ready(function () {
+        $("#buttonLogin").click(function () {
+            const items = $('#nm_user, #ds_password')
+            const body = JSON.stringify(getLoginFormatedBody(items));
 
-    function apiCall(resource, method, body) {
+            login(body);
+        });
+    });
+
+    function getBearerToken(resource, method, body) {
         $.ajax('http://127.0.0.1:5000' + resource, {
             contentType: 'application/json',
             type: method,
-            //data: body,8
-            headers: { "Authorization": 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDA5MTgwMywianRpIjoiZTdlZTUwNjYtY2U0OS00OGU2LWFhNWItZmQ2OWEzNDdlOTg2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjcwMDkxODAzLCJleHAiOjE2NzAwOTI3MDN9.hVUnFoQRU4RzbZYhax6Aoj_L48-0bIEl8U5JSg1uNM0' },
+            data: body,
             beforeSend: function () {
                 //$('.table').after('<p class="loading"> carregando ... </p>')
             },
@@ -26,6 +32,42 @@ $(function() {
             }
         })
     }
-});
-  
 
+    function apiCall(resource, method, body, token) {
+        $.ajax('http://127.0.0.1:5000' + resource, {
+            contentType: 'application/json',
+            type: method,
+            data: body,
+            headers: '',
+            beforeSend: function () {
+                //$('.table').after('<p class="loading"> carregando ... </p>')
+            },
+            error: function () {
+                //$('.table').after('<p class="loading"> deu ruim </p>')
+            },
+            success: function (dados, textStatus, xhr) {
+                //console.log(xhr.status);
+                if (xhr.status === '200') {
+                    return dados;
+                }
+                //console.log(dados);
+                //return -1;
+            },
+            complete: function () {
+                //$('.loading').remove();
+            }
+        })
+    }
+
+    function login(body) {
+        getBearerToken('/login', 'post', body);
+    }
+
+    function getLoginFormatedBody(bodyValues) {
+        const obj = {}
+        bodyValues.each(function () {
+            obj[this.id] = $(this).val();
+        })
+        return obj;
+    }
+});
