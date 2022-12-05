@@ -26,7 +26,7 @@
                 <table class="fl-table">
                     <thead>
                         <tr>
-                            <th class="th-rad">
+                            <th>
                                 <h1>
                                     Configurações de Conta
                                 </h1>
@@ -61,7 +61,7 @@
                             <div class="form-group col-md-2">
                                 <label for="input_cep">CEP</label>
                                 <input type="text" class="form-control" id="input_cep" name="cep"
-                                    placeholder="12345-123" pattern="\d{5}-\d{3}" value="@.cep" required>
+                                    placeholder="12345-123" pattern="\d{5}-\d{3}" value="" required>
                                 <!--Pattern-> máscara para o campo-->
                             </div>
                         </td>
@@ -71,7 +71,7 @@
                             <div class="form-group col-md-6">
                                 <label for="input_cidade">Cidade</label>
                                 <input type="text" class="form-control" id="input_cidade" name="cidade" maxlength="50"
-                                    value="@.cidade" required>
+                                    value="" required>
                             </div>
                         </td>
                     </tr>
@@ -147,16 +147,17 @@
                             <div class="form-group col-md-9 ml-3">
                                 <label for="input_complemento">Complemento</label>
                                 <input type="text" class="form-control" id="input_complemento" name="complemento"
-                                    placeholder="ex: Apartamento/Casa" maxlength="50" value="@.complemento"
-                                    required>
+                                    placeholder="ex: Apartamento/Casa" maxlength="50" value="@.complemento" required>
                             </div>
                         </td>
                     </tr>
+
+
                     <tr>
-                        <td><input type="button" value="Alterar"></td>
+                        <td><button class="btn2 btn-outline-primary py-2" type="submit" value="Alterar">Alterar</button></td>
                     </tr>
 
-
+                    
                 </table>
 
 
@@ -165,7 +166,12 @@
 
 
             </div>
-            <div class="loader"></div>
-
-            <script src="../js/site.js"></script>
+        </div>
+    </div>
+    <div class="loader"></div>
+    <script>$('#input_tel_1').mask('(00)00000-0000');</script>
+    <script>$('#input_tel_2').mask('(00)00000-0000');</script>
+    <script>$('#input_cep').mask('00000-000', { placeholder: "" });</script>
+    <script type="text/javascript" src="../lib/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+    <script src="../js/site.js"></script>
 </body>

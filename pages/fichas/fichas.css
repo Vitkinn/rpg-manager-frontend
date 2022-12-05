@@ -1,36 +1,27 @@
-.coin {
+body{
+    font-family: 'Roboto Condensed', Arial;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    border-radius: 10%;
-    font-family: 'Roboto Condensed', Arial;
-    color: white;
-    margin-left: 250px;
-    width: 750px;
-    height: 500px;
-    background: rgb(1, 1, 11);
-    background: linear-gradient(90deg, rgba(0, 6, 14, 1) 0%, rgba(3, 20, 42, 1) 51%, rgba(12, 18, 25, 1) 100%);
-    margin-top: 100px;
-    opacity: 90%;
-    overflow-x: hidden;
+    flex-direction: column;
+    background-color: transparent!important;
     overflow-y: hidden;
 }
-.bank{
+.bi {
+
+    filter:invert(90%);
+}
+.text-white{
+    fill: white;
     color: white;
 }
-.coin-text {
-    max-width: 450px;
+hr {
+    width: 65px;
+    margin-left: 0px;
+    color: rgb(0, 0, 0);
+
 }
 
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow-y: hidden;
-  overflow-x: hidden;
-}
 /*---------------- Loader Starts----------------------- */
 .loader {
     position: fixed;
@@ -44,11 +35,13 @@
     background: transparent;
     transition: opacity 0.75s, visibility 0.75s;
 }
-.loader-hidden{
+
+.loader-hidden {
     opacity: 0;
     visibility: hidden;
 }
-.loader::after{
+
+.loader::after {
     content: "";
     width: 75px;
     height: 75px;
@@ -57,12 +50,67 @@
     border-radius: 50%;
     animation: loading 0.75s ease infinite;
 }
-@keyframes loading{
-    from{
+
+@keyframes loading {
+    from {
         transform: rotate(0turn);
     }
-    to{
+
+    to {
         transform: rotate(1turn);
     }
 }
+
 /*---------------- Loader ends----------------------- */
+/* Table Styles */
+
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    width: 700px;
+}
+
+.table-wrapper-no-shadow {
+    margin: 10px 70px 70px;
+}
+
+.top-rad {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+    opacity: 80%;
+}
+
+    .fl-table td, .fl-table th {
+        text-align: center;
+        padding: 8px;
+    }
+
+    .fl-table td {
+        border-right: 1px solid #f8f8f8;
+        font-size: 16px;
+    }
+
+    .fl-table thead th {
+        color: #ffffff;
+        background: #06032f;
+        opacity: 95%;
+    }
+
+.th-rad {
+    color: #ffffff;
+    background: #06032f;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
