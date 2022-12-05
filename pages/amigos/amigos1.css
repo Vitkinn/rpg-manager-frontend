@@ -30,7 +30,15 @@ body{
     overflow-y: hidden;
 }
 /* Table Styles */
-
+.btn2 {
+    transition: all .5s ease;
+    border-radius: 30px;
+    color: #07043e;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #07043e;
+    margin:0px;
+}
 .table-wrapper {
     margin: 10px 70px 70px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
@@ -80,4 +88,41 @@ body{
     background: #06032f;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #07043e;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }

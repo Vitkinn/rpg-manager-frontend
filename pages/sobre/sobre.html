@@ -8,6 +8,8 @@
     <title>RPG'ist</title>
     <link rel="icon" href="/static/Logotipo.png">
     <link rel="stylesheet" href="./sobre.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,19 +20,26 @@
             <h2>SENAI - Análise e Desenvimento de sistemas</h2>
             <h2>Desenvolvimento Web</h2>
             <h2>Trabalho desenvolvido por: </h2>
-            <div>
-                <h3>Vitor Hugo Gauer</h3>
-                <img src="../Icons/BootIcon/github.svg" alt="">
-            </div>
-            <div>
-                <h3>Arthur Moser</h3>
-                <img src="../Icons/BootIcon/github.svg" alt="">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+
+                <div class="d-flex flex-row">
+                    <a href="https://github.com/Vitkinn" target="_blank">
+                    <h3>Vitor Hugo Gauer</h3></a>
+                    <img class="bi pl-2 " src="../Icons/BootIcon/github.svg" width="32px" alt="">
+
+                </div>
+                <div class="d-flex flex-row">
+                    <a href="https://github.com/moserarthur" target="_blank">
+                    <h3>Arthur Moser</h3></a>
+                    <img class="bi pl-2" src="../Icons/BootIcon/github.svg" width="32px" alt="">
+
+                </div>
             </div>
         </div>
     </div>
     <div class="loader"></div>
     <script src="../js/site.js"></script>
-    
+
 </body>
 
 </html>

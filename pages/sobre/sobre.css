@@ -17,13 +17,15 @@
 .sobre-text {
     max-width: 450px;
 }
+.bi {
 
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    filter:invert(90%);
+}
+body {
+
     width: 100%;
     font-family: 'Roboto Condensed', Arial;
+    background-color: transparent!important;
 }
 
 /*---------------- Loader Starts----------------------- */

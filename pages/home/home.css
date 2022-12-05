@@ -13,6 +13,15 @@ body {
     font-family: 'Roboto Condensed', Arial;
     font-size: 16px;
 }
+.btn2 {
+    transition: all .5s ease;
+    border-radius: 30px;
+    color: #07043e;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #07043e;
+    margin:0px;
+}
 iframe{
     background-color : transparent;
     border:none;
