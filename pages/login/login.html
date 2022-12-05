@@ -19,19 +19,22 @@
 
     <main>
         <div class="login-box">
-            <div>
-                <img src="../home/Logo.png" style="margin-bottom: 20px;" width="350px" alt="">
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="nm_user" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="ds_password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-                <button id="buttonLogin" type="submit" href="../" value="Entrar">Entrar</button>
-            </div>
-            <a href="../cadastrar/cadastrar.html">Registre-se</a>
+            <form action="" method="post" class="needs-validation" novalidate>
+
+                <div>
+                    <img src="../home/Logo.png" style="margin-bottom: 20px;" width="350px" alt="">
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="nm_user" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="ds_password" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                    <button id="buttonLogin" type="submit" value="Entrar">Entrar</button>
+                </div>
+                <a href="../cadastrar/cadastrar.html">Registre-se</a>
+            </form>
         </div>
     </main>
 
