@@ -16,29 +16,24 @@
 </head>
 
 <body id="login">
-
     <main>
         <div class="login-box">
-            <form action="../home/home.html" method="post" class="needs-validation" novalidate>
-
-                <div>
-                    <img src="../home/Logo.png" style="margin-bottom: 20px;" width="350px" alt="">
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="nm_user" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="ds_password" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                    <button class="btn btn-outline-primary mt-2" type="submit" value="Entrar">Entrar</button>
-                </div>
-                <h6 class="mt-5"> <a href="../cadastrar/cadastroUsuario.html">Registre-se</a></h6>
-                <h7 class="pt-2"> <a href="../cadastrar/cadastrar.html">Esqueci minha senha</a></h7>
-                
+            
+            <div>
+                <img src="../home/Logo.png" style="margin-bottom: 20px;" width="350px" alt="">
+            </div>
+            <small id="error_message" style="color: red;"></small>
+            <form class="form-floating mb-3">
+                <input type="email" class="form-control" id="nm_user" placeholder="username" required>
+                <label for="floatingInput">Email address</label>
             </form>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="ds_password" placeholder="Password" required>
+                <label for="floatingPassword">Password</label>
+                <button id="buttonLogin" type="submit" href="../" value="Entrar">Entrar</button>
+            </div>
+            <a href="../cadastrar/cadastroUsuario.html">Registre-se</a>
         </div>
-
     </main>
 
 

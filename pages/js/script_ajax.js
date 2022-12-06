@@ -1,10 +1,18 @@
 $(function() {
     $(document).ready(function () {
         $("#buttonLogin").click(function () {
-            const items = $('#nm_user, #ds_password')
-            const body = JSON.stringify(getLoginFormatedBody(items));
+            let items = $('#nm_user, #ds_password')
+            let body = JSON.stringify(getFormatedBody(items));
 
             login(body);
+        });
+
+        $("#buttonRegister").click(function () {
+            let items = $('#nm_user, #ds_avatar, #ds_email, #ds_name, #ds_password, #nr_contact')
+            console.log(items)
+            let body = JSON.stringify(getFormatedBody(items));
+
+            register(body);
         });
     });
 
@@ -20,12 +28,15 @@ $(function() {
                 //$('.table').after('<p class="loading"> deu ruim </p>')
             },
             success: function (dados, textStatus, xhr) {
-                //console.log(xhr.status);
-                if (xhr.status === '200') {
+                if (xhr.status == 200 && !xhr.responseJSON.message) {
+                    window.location.href = "../home/home.html"
                     return dados;
                 }
+                console.log(xhr.responseJSON.message);
                 console.log(dados);
-                //return -1;
+                document.getElementById('error_message').replaceChildren();
+                document.getElementById('error_message').append('Usuário ou senha inválida, por-favor, tente novamente.');
+                return -1;
             },
             complete: function () {
                 //$('.loading').remove();
@@ -38,7 +49,6 @@ $(function() {
             contentType: 'application/json',
             type: method,
             data: body,
-            headers: '',
             beforeSend: function () {
                 //$('.table').after('<p class="loading"> carregando ... </p>')
             },
@@ -46,12 +56,13 @@ $(function() {
                 //$('.table').after('<p class="loading"> deu ruim </p>')
             },
             success: function (dados, textStatus, xhr) {
-                //console.log(xhr.status);
-                if (xhr.status === '200') {
+                if (xhr.status == 201 && !xhr.responseJSON.message) {
+                    console.log(dados);
+                    window.location.href = "../login/login.html"
                     return dados;
                 }
-                //console.log(dados);
-                //return -1;
+                console.log(xhr.responseJSON.message);
+                return -1;
             },
             complete: function () {
                 //$('.loading').remove();
@@ -63,7 +74,11 @@ $(function() {
         getBearerToken('/login', 'post', body);
     }
 
-    function getLoginFormatedBody(bodyValues) {
+    function register(body) {
+        apiCall('/users/1', 'post', body);
+    }
+
+    function getFormatedBody(bodyValues) {
         const obj = {}
         bodyValues.each(function () {
             obj[this.id] = $(this).val();
